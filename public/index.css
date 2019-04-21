@@ -1,0 +1,17 @@
+@media only screen and (max-width: 992px) {
+    nav .brand-logo {
+        left: 30%;
+        -webkit-transform: translateX(-20%);
+        transform: translateX(-20%);
+    }
+}
+
+.autocomplete-content li img {
+    height: 32px;
+    width: 32px;
+    margin: 9px 15px;
+}
+
+main.container {
+    padding-top: 20px;
+}

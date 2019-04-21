@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MyPassword Web</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+
+<div>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <span class="brand-logo">MyPassword Web</span>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">web</i>
+                        <input type="text" id="website" class="autocomplete">
+                        <label for="website">Website</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s9">
+                        <input id="masterPassword" type="password" class="validate">
+                        <label for="masterPassword">Master password</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <label>
+                            <input type="checkbox" id="save"/>
+                            <span>Save</span>
+                        </label>
+                    </div>
+                </div>
+                <a class="waves-effect waves-light btn" id="generate">Generate password</a>
+            </div>
+        </div>
+
+    </main>
+</div>
+</body>
+</html>
