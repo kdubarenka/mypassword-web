@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         generatePassword(website, masterPassword).then(value => {
                 M.toast({
-                    html: `<span>Password has been generated</span>
+                    html: `<span>Password has been generated.</span>
 <input id="password" value="${value}" style="position: absolute; left: -9999px" readonly>
 <button class="btn-flat toast-action copy-btn" data-clipboard-target="#password">Copy</button>`
                 });
                 new ClipboardJS('.copy-btn').on('success', function () {
                     M.Toast.dismissAll();
                     M.toast({
-                        html: 'Password copied to clipboard.'
+                        html: 'Password has been copied to clipboard.'
                     });
                 });
             }, () => M.toast({html: 'Error occurred.<i class="material-icons prefix">error</i>'})
