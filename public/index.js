@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const $ = document.querySelector.bind(document);
 
-    fetch("/websites.json")
+    fetch("./websites.json")
         .then(rs => rs.json())
         .then(autocompleteData => M.Autocomplete.init($("#website"), {
             data: autocompleteData
