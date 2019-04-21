@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
         ).then(value => btoa(String.fromCharCode(...new Uint8Array(value.slice(0, 12)))));
     }
 
+    new ClipboardJS('.copy-btn').on('success', function () {
+        M.Toast.dismissAll();
+        M.toast({
+            html: 'Password has been copied to clipboard.'
+        });
+    });
 
     $("#generate").addEventListener("click", function onGenerate() {
         let website = $("#website").value;
@@ -38,12 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     html: `<span>Password has been generated.</span>
 <input id="password" value="${value}" style="position: absolute; left: -9999px" readonly>
 <button class="btn-flat toast-action copy-btn" data-clipboard-target="#password">Copy</button>`
-                });
-                new ClipboardJS('.copy-btn').on('success', function () {
-                    M.Toast.dismissAll();
-                    M.toast({
-                        html: 'Password has been copied to clipboard.'
-                    });
                 });
             }, () => M.toast({html: 'Error occurred.<i class="material-icons prefix">error</i>'})
         );
